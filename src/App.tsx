@@ -1,15 +1,11 @@
-
-
-
+import MainLayout from "./layout/MainLayout";
 
 function App() {
-
-
   return (
-    <>
-      <h1 className="bg-red-500">Grey Furniture</h1>
-    </>
-  )
+    <div>
+      <MainLayout/>
+    </div>
+  );
 }
 
-export default App
+export default App;
