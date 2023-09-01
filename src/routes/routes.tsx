@@ -5,6 +5,7 @@ import ElevatingDesk from "../page/ElevatingDesk";
 import About from "../page/About";
 import Contact from "../page/Contact";
 import NotFound from "../page/NotFound";
+import LineCollection from "../page/LineCollection";
 
 const routes = createBrowserRouter([
     {
@@ -17,8 +18,12 @@ const routes = createBrowserRouter([
         element: <AllCollection/>
     },
     {
-        path: "/elevatingdesk",
+        path: "/elevating-desk",
         element: <ElevatingDesk/>
+    },
+    {
+        path: "/line-collection",
+        element: <LineCollection/>
     },
     {
         path: "/about",
