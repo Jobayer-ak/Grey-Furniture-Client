@@ -24,7 +24,7 @@ function Navbar() {
                   <MdOutlineKeyboardArrowDown size={25} className="ml-1" />
                 </div>
 
-                <ul className="absolute mt-[-99999px] left-0 pl-3 pb-2 text-black group-hover:mt-[0px] w-full bg-white group-hover:translate-y-2 border-t-[1px]  transform transition duration-300 ease-in-out">
+                <ul className="absolute mt-[-99999px] left-0 pl-3 pb-2 text-black group-hover:mt-[0px] w-full bg-white group-hover:translate-y-2 border-t-[1px] transform transition duration-300 ease-in-out">
                   <li className="p-2 hover:translate-x-3 transform transition duration-300 ease-in-out">
                     <h5 className="">Chair</h5>
                   </li>
