@@ -4,7 +4,7 @@ import ShowCase from "../components/ShowCase";
 function Home() {
   return <div className="">
     <Hero />
-    <ShowCase/>
+     <ShowCase/> 
   </div>;
 }
 

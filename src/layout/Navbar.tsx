@@ -3,19 +3,93 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { BsSearch } from 'react-icons/bs';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
+import { useEffect, useState } from 'react';
+import NavbarModile from '../components/NavbarMobile';
+import Search from '../components/Search';
 
 function Navbar() {
+  const [toggleOpen, setToggleOpen] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+
+  const handleToggleMenu = () => {
+    setToggleOpen(!toggleOpen);
+  };
+
+  useEffect(() => {
+    setToggleOpen(false);
+  }, []);
+
+  console.log('toggle: ', toggleOpen);
+
+  const handleSearch = () => {
+    setOpenSearch(!openSearch);
+  };
+
+
+
   return (
-    <div className="w-full sticky z-[50]">
-      <div className="h-full w-full flex justify-end gap-8  pt-12">
-        <div className="flex items-center justify-start gap-8 w-full h-full mx-[60px]">
+    <div className="w-full z-20 sticky">
+      <div className="h-full w-full flex justify-end gap-8 pt-4 lg:pt-12 relative">
+        <div className="flex items-center lg:justify-start justify-between  gap-8 w-full h-full mx-[20px] lg:mx-[60px]">
           <div>
             <h3 className="text-2xl text-white font-bold italic bg-[#de885f] rounded-md">
               GREY
             </h3>
           </div>
-
-          <div>
+          {/* burger menu for mobile */}
+          <div className="lg:hidden flex items-center justify-center gap-4">
+            <button className="" onClick={handleSearch}>
+              <BsSearch color="white" size={26} />
+            </button>
+            <button
+              onClick={handleToggleMenu}
+              // className="focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                fill="none"
+                viewBox="0 0 510 511"
+                id="menu"
+              >
+                <path
+                  fill="#fff"
+                  fillRule="evenodd"
+                  d="M356 181H156V166H356V181zM283.017 256.352L156.001 256 156.043 241 283.059 241.352 283.017 256.352zM356.004 331H156.004V316H356.004V331z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <button>
+              <AiOutlineShoppingCart color="white" size={30} />
+            </button>
+          </div>
+          {/* search  */} 
+          {/* {openSearch && (
+            <Search setOpenSearch={setOpenSearch} isOpen={openSearch} />
+          )}{' '} */}
+          <div
+            className={`absolute bg-white  transition-all duration-500 ease-in-out z-20 ${
+              openSearch
+                ? 'top-0 left-0 right-0 w-full'
+                : 'w-0 left-0 top-[-1500px] right-0'
+            }`}
+          >
+            <Search setOpenSearch={setOpenSearch} isOpen={openSearch} />
+          </div>
+          {/* rightNavMenu drawer for mobil and tab */}
+          <div
+            className={`bg-slate-400 text-black fixed transition-all duration-500 ease-in-out z-20 ${
+              toggleOpen
+                ? 'right-0 top-0 bottom-0 w-5/6'
+                : 'w-0 right-[-1500px] top-0 bottom-0'
+            }`}
+          >
+            <NavbarModile setToggleOpen={setToggleOpen} isOpen={toggleOpen} />
+          </div>
+          {/* for large screen */}
+          <div className="lg:block hidden">
             <ul className="flex gap-5 text-xl">
               <li className="py-2 px-4 text-white hover:text-black hover:bg-white relative group">
                 <div className="flex items-center">
@@ -61,9 +135,9 @@ function Navbar() {
                 </Link>
               </li>
               <li className="py-2 px-4 ">
-                <Link to="/signup">
+                <button onClick={() => handleSearch(true)}>
                   <BsSearch color="white" size={26} />
-                </Link>
+                </button>
               </li>
               <li className="py-2 px-4">
                 <Link to="/signup">
