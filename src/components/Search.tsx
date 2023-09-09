@@ -25,23 +25,24 @@ function Search(props: ISearch) {
   };
 
   return (
-    <div className='p-10 h-[120px]'>
-      <div className="flex justify-between items-center">
+    <div className='p-10 h-[120px] w-full'>
+      <div className="flex justify-center items-center gap-5">
         <button onClick={handleCloseSearch} className="">
           <BsSearch color="black" size={30} />
         </button>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-300 ">
+        <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-300 w-full">
           <input
-            className="text-center w-full max-w-[100%] text-[18px]  rounded-sm"
+            className="text-start text-2xl px-3 border-0 outline-none"
             type="text"
-            placeholder="Search"
+            placeholder="Search in our store"
             {...register('search', {
               required: 'Text is required!',
             })}
+            style={{width: "100%"}}
           />
         </form>
-        <RxCross1 className="cursor-pointer" size={22} color="black" onClick={handleCloseSearch} />
+        <RxCross1 className="cursor-pointer" size={30} color="black" onClick={handleCloseSearch} />
       </div>
     </div>
   );

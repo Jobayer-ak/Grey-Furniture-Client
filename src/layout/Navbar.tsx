@@ -73,7 +73,7 @@ function Navbar() {
             className={`absolute bg-white  transition-all duration-500 ease-in-out z-20 ${
               openSearch
                 ? 'top-0 left-0 right-0 w-full'
-                : 'w-0 left-0 top-[-1500px] right-0'
+                : 'left-0 top-[-1500px] right-0'
             }`}
           >
             <Search setOpenSearch={setOpenSearch} isOpen={openSearch} />

@@ -19,12 +19,12 @@ function Hero() {
   return (
     <div
       data-aos="zoom-out"
-      className="min-w-screen min-h-screen bg-cover bg-center mt-[-172px] relative"
+      className="min-w-screen lg:min-h-screen h-[50vh] bg-cover bg-center mt-[-172px] relative"
       style={{ backgroundImage: backgroundImage }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-[#121211] opacity-90 z-10"></div>
-      <div className="relative z-10 flex justify-center items-center h-screen">
-        <div className="mt-10">
+      <div className="relative z-10 flex justify-center items-center lg:min-h-screen min-h-[60vh]">
+        <div className="lg:mt-10">
           <h1
             className="lg:text-7xl text-4xl font-extrabold text-white"
             data-aos="fade-down"

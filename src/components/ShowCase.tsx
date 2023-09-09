@@ -6,7 +6,7 @@ import storage from '../assets/banner/inner_banner_storage.webp';
 
 function ShowCase() {
   return (
-    <div className="w-full">
+    <div className="w-full" >
       <div className='lg:px-12 px-3 pt-12'>
         <div className="">
           <h2 className="text-center text-4xl font-bold">
