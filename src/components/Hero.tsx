@@ -8,17 +8,17 @@ import { CgArrowLongRight } from 'react-icons/cg';
 function Hero() {
   const backgroundImage = `url(${bgImage})`;
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Set the animation duration
-      easing: 'ease-in-out', // Set the animation easing
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, // Set the animation duration
+  //     easing: 'ease-in-out', // Set the animation easing
+  //   });
+  // }, []);
 
 
   return (
     <div
-      data-aos="zoom-out"
+      // data-aos="zoom-out"
       className="min-w-screen lg:min-h-screen h-[50vh] bg-cover bg-center mt-[-172px] relative"
       style={{ backgroundImage: backgroundImage }}
     >

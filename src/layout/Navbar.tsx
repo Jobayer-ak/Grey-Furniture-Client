@@ -19,13 +19,11 @@ function Navbar() {
     setToggleOpen(false);
   }, []);
 
-  console.log('toggle: ', toggleOpen);
+
 
   const handleSearch = () => {
     setOpenSearch(!openSearch);
   };
-
-
 
   return (
     <div className="w-full z-20 sticky">
@@ -65,10 +63,9 @@ function Navbar() {
               <AiOutlineShoppingCart color="white" size={30} />
             </button>
           </div>
-          {/* search  */} 
-          {/* {openSearch && (
-            <Search setOpenSearch={setOpenSearch} isOpen={openSearch} />
-          )}{' '} */}
+
+
+          {/* search  */}
           <div
             className={`absolute bg-white  transition-all duration-500 ease-in-out z-20 ${
               openSearch
@@ -76,11 +73,13 @@ function Navbar() {
                 : 'left-0 top-[-1500px] right-0'
             }`}
           >
-            <Search setOpenSearch={setOpenSearch} isOpen={openSearch} />
+            <Search setOpenSearch={setOpenSearch} openSearch={openSearch} />
           </div>
-          {/* rightNavMenu drawer for mobil and tab */}
+
+
+          {/* rightNavMenu drawer for mobile and tab */}
           <div
-            className={`bg-slate-400 text-black fixed transition-all duration-500 ease-in-out z-20 ${
+            className={`bg-white text-black fixed z-20 transition-all duration-500 ease-in-out ${
               toggleOpen
                 ? 'right-0 top-0 bottom-0 w-5/6'
                 : 'w-0 right-[-1500px] top-0 bottom-0'
@@ -88,6 +87,7 @@ function Navbar() {
           >
             <NavbarModile setToggleOpen={setToggleOpen} isOpen={toggleOpen} />
           </div>
+
           {/* for large screen */}
           <div className="lg:block hidden">
             <ul className="flex gap-5 text-xl">

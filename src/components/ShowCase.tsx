@@ -7,7 +7,7 @@ import storage from '../assets/banner/inner_banner_storage.webp';
 function ShowCase() {
   return (
     <div className="w-full" >
-      <div className='lg:px-12 px-3 pt-12'>
+      <div className='px-4 lg:px-[50px] pt-12'>
         <div className="">
           <h2 className="text-center text-4xl font-bold">
             We do work furniture a little bit different.
@@ -19,7 +19,7 @@ function ShowCase() {
         </div>
 
         {/* collection cards */}
-        <div className="grid lg:grid-cols-4 grid-cols-2 my-24">
+        <div className="grid lg:grid-cols-4 grid-cols-2 my-24 ">
           <BannerCard image={chair} title={'Chair'} />
           <BannerCard image={desk} title={'Desk'} />
           <BannerCard image={sofa} title={'Sofa'} />
