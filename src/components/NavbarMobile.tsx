@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFacebook } from "react-icons/fa";
 import { RxCross1 } from 'react-icons/rx';
+import { BsInstagram,BsYoutube } from "react-icons/bs";
+
 import { Link } from 'react-router-dom';
 
 interface IMobileMenu {
@@ -99,8 +101,10 @@ function NavbarMobile(props: IMobileMenu) {
         </div>
 
         {/* social icons */}
-        <div>
-          <FaFacebook/>
+        <div className='flex justify-center items-center gap-5 mt-8'>
+          <FaFacebook size={34} className="hover:rotate-[360deg] transition-all duration-300 ease-in-out"/>
+          <BsInstagram size={32} className="hover:rotate-[360deg] transition-all duration-300 ease-in-out"/>
+          <BsYoutube size={40} className="hover:rotate-[360deg] transition-all duration-300 ease-in-out"/>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ function Navbar() {
       <div className="h-full w-full flex justify-end gap-8 pt-4 lg:pt-12 relative">
         <div className="flex items-center lg:justify-start justify-between  gap-8 w-full h-full mx-[20px] lg:mx-[60px]">
           <div>
-            <h3 className="text-2xl text-white font-bold italic bg-[#de885f] rounded-md">
+            <h3 className="text-2xl text-white font-bold italic bg-[#de885f] p-2 rounded-md">
               GREY
             </h3>
           </div>
@@ -73,7 +73,7 @@ function Navbar() {
                 : 'left-0 top-[-1500px] right-0'
             }`}
           >
-            <Search setOpenSearch={setOpenSearch} openSearch={openSearch} />
+            <Search setOpenSearch={setOpenSearch} isOpen={openSearch} />
           </div>
 
 
@@ -135,7 +135,7 @@ function Navbar() {
                 </Link>
               </li>
               <li className="py-2 px-4 ">
-                <button onClick={() => handleSearch(true)}>
+                <button onClick={handleSearch}>
                   <BsSearch color="white" size={26} />
                 </button>
               </li>
