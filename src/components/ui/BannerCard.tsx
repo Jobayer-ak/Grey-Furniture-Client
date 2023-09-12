@@ -6,7 +6,7 @@ interface IImage {
 function BannerCard(props: IImage) {
   return (
    
-      <div className="relative group" >
+      <div className="relative group" data-aos="zoom-in">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#000] opacity-40 z-10"></div>
         <img src={props.image} alt="collection" width={400} height={250} />
 
