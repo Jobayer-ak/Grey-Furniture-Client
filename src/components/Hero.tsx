@@ -22,8 +22,11 @@ function Hero() {
       data-aos="zoom-out"
       className="min-w-screen lg:min-h-screen h-[50vh] bg-cover bg-center mt-[-172px] relative"
       style={{ backgroundImage: backgroundImage }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#121211] opacity-90 z-10"></div>
+      >
+        {/* overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#121211] opacity-90 z-10"></div>
+        
+        
       <div className="relative z-10 flex justify-center items-center lg:min-h-screen min-h-[60vh]">
         <div className="lg:mt-10">
           <h1
