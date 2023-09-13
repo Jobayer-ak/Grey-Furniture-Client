@@ -42,7 +42,7 @@ function Hero() {
           </div>
           <div className="flex justify-center items-center mt-6 text-white ">
             <div className="flex items-center gap-2 text-2xl  group relative">
-              <button className="flex items-center text-xl font-bold border-2 pbg-blue-500 text-white px-3 py-2 transition-all duration-300 hover:pr-9 hover:translate-x-2 hover:bg-white hover:text-black">
+              <button className="flex items-center text-xl font-bold border-2 text-white px-3 py-2 transition-all duration-300 hover:pr-9 hover:translate-x-2 hover:bg-white hover:text-black">
                 Shop Now
                 <span className="absolute right-0 pr-1 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <CgArrowLongRight size={25}/>

@@ -3,6 +3,7 @@ import ShowCase from '../components/ShowCase';
 import FooterPromotion from '../components/FooterPromotion';
 import Offers from '../components/Offers';
 import Clients from '../components/Clients';
+import Featured from '../components/Featured';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <ShowCase />
       <Offers />
       <Clients />
+      <Featured/>
       <FooterPromotion />
     </div>
   );

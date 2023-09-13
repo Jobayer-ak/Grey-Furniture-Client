@@ -8,8 +8,20 @@ import shopup from '../assets/clients/ShopUp.avif';
 import sheba from '../assets/clients/sheba.webp';
 import aksid from '../assets/clients/aksid.webp';
 import goodyBro from '../assets/clients/goodybro.avif';
+import { useEffect } from 'react';
 
 function Clients() {
+
+  useEffect(() => {
+    // Add the "scale-100" class to reveal the images with animation
+    const images = document.querySelectorAll(".callout-image");
+    images.forEach((image, index) => {
+      setTimeout(() => {
+        image.classList.add("scale-100");
+      }, index * 500); // Delay each image animation
+    });
+  }, []);
+
   return (
     <div className="w-full lg:px-[50px] px-[15px] lg:my-[120px] my-[60px]">
       <h3 className="text-4xl font-bold mb-6 text-center">Trusted By Top Companies</h3>
@@ -28,6 +40,10 @@ function Clients() {
           <img src={goodyBro} />
         </div>
       </div>
+      
+      
+     
+      
     </div>
   );
 }
