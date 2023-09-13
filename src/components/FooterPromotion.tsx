@@ -2,6 +2,8 @@ import image1 from '../assets/promotion/promotion-1.webp';
 import image2 from '../assets/promotion/promotion-2.webp';
 import image3 from '../assets/promotion/promotion-3.webp';
 import PromotionCard from './ui/PromotionCard';
+
+
 function FooterPromotion() {
   const title1 = <h4>Exceptional Furniture For The Taskmasters</h4>;
   const title2 = <h4>Ergonomic Design</h4>;
@@ -23,6 +25,7 @@ function FooterPromotion() {
       Furniture.
     </p>
   );
+  
   const desc3 = (
     <p>
       Our breathable mesh material provides an optimal air flow to avoid
@@ -32,7 +35,7 @@ function FooterPromotion() {
   );
 
   return (
-    <div className="w-full lg:px-[50px] px-[15px]">
+    <div className="w-full lg:px-[50px] px-[15px] my-12">
       <div className="flex-none lg:flex justify-center gap-10">
         <div>
           <PromotionCard
@@ -56,6 +59,8 @@ function FooterPromotion() {
           />
         </div>
       </div>
+
+     
     </div>
   );
 }
