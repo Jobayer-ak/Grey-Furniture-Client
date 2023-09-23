@@ -4,6 +4,7 @@ import FooterPromotion from '../components/FooterPromotion';
 import Offers from '../components/Offers';
 import Clients from '../components/Clients';
 import Featured from '../components/Featured';
+import CommentsSlider from '../components/CommentsSlider';
 
 function Home() {
   return (
@@ -12,7 +13,8 @@ function Home() {
       <ShowCase />
       <Offers />
       <Clients />
-      <Featured/>
+      <Featured />
+      <CommentsSlider/>
       <FooterPromotion />
     </div>
   );
