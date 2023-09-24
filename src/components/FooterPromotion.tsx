@@ -35,7 +35,7 @@ function FooterPromotion() {
   );
 
   return (
-    <div className="w-full lg:px-[50px] px-[15px] my-12">
+    <div className="w-full lg:px-[50px] px-[15px] mt-[120px] mb-12">
       <div className="flex-none lg:flex justify-center gap-10">
         <div>
           <PromotionCard

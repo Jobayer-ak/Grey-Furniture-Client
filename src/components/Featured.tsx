@@ -48,7 +48,7 @@ function Featured() {
   }, []);
 
   return (
-    <div className="w-full lg:px-[50px] md:px-[30px] px-[15px] pt-16 pb-[150px]">
+    <div className="w-full lg:px-[50px] md:px-[30px] px-[15px] pt-16 pb-[150px] border-b-[1px] border-slate-200">
       {/* chair featured */}
       <div className=" lg:flex justify-around">
        
@@ -153,6 +153,8 @@ function Featured() {
           </div>
         </div>
       </div>
+
+      
     </div>
   );
 }

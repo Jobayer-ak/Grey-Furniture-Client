@@ -9,3 +9,16 @@ body {
   overflow-x: hidden;
 }
 
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  border: 0.2rem solid white;
+  padding: 0.2rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}

@@ -12,9 +12,9 @@ function Home() {
       <Hero />
       <ShowCase />
       <Offers />
+      <CommentsSlider/>
       <Clients />
       <Featured />
-      <CommentsSlider/>
       <FooterPromotion />
     </div>
   );
